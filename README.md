@@ -1,7 +1,4 @@
 # vktesttask
-# vktesttask
-# vktesttask
-# vktesttask
-# vktesttask
-# vktesttask
-# vktesttask
+В качестве API использовано https://rickandmortyapi.com .
+На первом экране выводится список всех сущностей, по 20 сущностей на страницу, переключение между страницами осуществляется двумя кнопками в NavigationBar. Список сущностей находится в TableView. При нажатии на ячейку TableView осуществляется переход на страницу просмотра детальной информации о герое.
+![](./DetailMaster/rick_and_morty.gif)
