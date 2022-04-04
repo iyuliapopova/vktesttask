@@ -23,6 +23,7 @@
 		FBA5BC1D27FAB069002DA11E /* RickAndMortyEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC1C27FAB069002DA11E /* RickAndMortyEpisodes.swift */; };
 		FBA5BC1F27FAB0AF002DA11E /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC1E27FAB0AF002DA11E /* Episodes.swift */; };
 		FBA5BC2327FADDA0002DA11E /* UIColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC2227FADDA0002DA11E /* UIColorsExtension.swift */; };
+		FBA5BC2627FAECB8002DA11E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC2527FAECB8002DA11E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FBA5BC1C27FAB069002DA11E /* RickAndMortyEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyEpisodes.swift; sourceTree = "<group>"; };
 		FBA5BC1E27FAB0AF002DA11E /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
 		FBA5BC2227FADDA0002DA11E /* UIColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorsExtension.swift; sourceTree = "<group>"; };
+		FBA5BC2527FAECB8002DA11E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				FBA5BC0527FA4923002DA11E /* Assets.xcassets */,
 				FBA5BC0727FA4923002DA11E /* LaunchScreen.storyboard */,
 				FBA5BC0A27FA4923002DA11E /* Info.plist */,
+				FBA5BC2527FAECB8002DA11E /* DetailViewController.swift */,
 			);
 			path = DetailMaster;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA5BC2627FAECB8002DA11E /* DetailViewController.swift in Sources */,
 				FBA5BC1D27FAB069002DA11E /* RickAndMortyEpisodes.swift in Sources */,
 				FBA5BC1327FAAF6E002DA11E /* RickAndMorty.swift in Sources */,
 				FBA5BC1127FAAF54002DA11E /* RickAndMortyService.swift in Sources */,

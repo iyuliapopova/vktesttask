@@ -12,6 +12,9 @@ class RickAndMortyService {
     
     static let shared = RickAndMortyService()
     
+    var heroes : [Hero] = []
+    var heroesImages : [UIImage] = []
+    
     func getPage(completion: @escaping (RickAndMorty?) ->()) {
         AF.request("https://rickandmortyapi.com/api/character").responseDecodable(of: RickAndMorty.self) { result in
             completion(result.value)

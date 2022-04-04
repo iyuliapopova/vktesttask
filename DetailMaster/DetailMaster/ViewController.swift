@@ -17,8 +17,7 @@ class ViewController: UIViewController {
     }
     
     let service = RickAndMortyService.shared
-    
-    var heroes : [Hero] = []
+
     private lazy var titleLabel = UILabel()
     var areHeroesLoaded = false
     private lazy var tableView: UITableView = {
@@ -38,13 +37,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         service.getPage { [self] result in
             print(result?.info?.count)
-            self.heroes = result!.results!
-            areHeroesLoaded = true
-            tableView.reloadData()
-            for hero in self.heroes {
+
+            service.heroes = result!.results!
+            
+            for hero in service.heroes {
                 print(hero.name!)
                 print(hero.id!)
+                RickAndMortyService.getImage(url: hero.image!) { image in
+                    service.heroesImages.append(image!)
+                }
             }
+            
+            areHeroesLoaded = true
+            tableView.reloadData()
+            
         }
         
         configureUI()
@@ -94,8 +100,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 12.0)
 
         if areHeroesLoaded {
-            cell.textLabel?.text = heroes[indexPath.row].name
-            cell.detailTextLabel?.text = heroes[indexPath.row].location!.name
+            if indexPath.row < service.heroesImages.count {
+                cell.imageView?.image = service.heroesImages[indexPath.row]
+            }
+            cell.textLabel?.text = service.heroes[indexPath.row].name
+            cell.detailTextLabel?.text = String(service.heroes[indexPath.row].id!)
+
         } else {
             cell.textLabel?.text = "Loading..."
             cell.detailTextLabel?.text = "Loading..."
@@ -103,5 +113,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        let detailViewController = DetailViewController()
+        detailViewController.id = indexPath.row
+        let controller = UINavigationController(rootViewController: detailViewController)
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.present(controller, animated: true)
+        
+        
+    }
 }
