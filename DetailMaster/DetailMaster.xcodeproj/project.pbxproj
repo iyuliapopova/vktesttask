@@ -22,6 +22,7 @@
 		FBA5BC1B27FAB043002DA11E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC1A27FAB043002DA11E /* Location.swift */; };
 		FBA5BC1D27FAB069002DA11E /* RickAndMortyEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC1C27FAB069002DA11E /* RickAndMortyEpisodes.swift */; };
 		FBA5BC1F27FAB0AF002DA11E /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC1E27FAB0AF002DA11E /* Episodes.swift */; };
+		FBA5BC2327FADDA0002DA11E /* UIColorsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5BC2227FADDA0002DA11E /* UIColorsExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FBA5BC1A27FAB043002DA11E /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FBA5BC1C27FAB069002DA11E /* RickAndMortyEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyEpisodes.swift; sourceTree = "<group>"; };
 		FBA5BC1E27FAB0AF002DA11E /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
+		FBA5BC2227FADDA0002DA11E /* UIColorsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorsExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		FBA5BBFB27FA4921002DA11E /* DetailMaster */ = {
 			isa = PBXGroup;
 			children = (
+				FBA5BC2427FADDB0002DA11E /* Extensions */,
 				FBA5BC2127FAB0F5002DA11E /* Service */,
 				FBA5BC2027FAB0DC002DA11E /* Model */,
 				FBA5BBFC27FA4921002DA11E /* AppDelegate.swift */,
@@ -129,6 +132,14 @@
 				FBA5BC1027FAAF54002DA11E /* RickAndMortyService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FBA5BC2427FADDB0002DA11E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBA5BC2227FADDA0002DA11E /* UIColorsExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				FBA5BC1527FAAFD3002DA11E /* Info.swift in Sources */,
 				FBA5BC1B27FAB043002DA11E /* Location.swift in Sources */,
 				FBA5BC1727FAB004002DA11E /* Hero.swift in Sources */,
+				FBA5BC2327FADDA0002DA11E /* UIColorsExtension.swift in Sources */,
 				FBA5BBFD27FA4921002DA11E /* AppDelegate.swift in Sources */,
 				FBA5BBFF27FA4921002DA11E /* SceneDelegate.swift in Sources */,
 				FBA5BC1F27FAB0AF002DA11E /* Episodes.swift in Sources */,
