@@ -70,17 +70,27 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = UIColor.white
-        
-        navigationController?.navigationItem.hidesBackButton = false
-        
-        let backButton = UIBarButtonItem(title: "< back",
-                                         style: .done,
-                                         target: self,
-                                         action: #selector(popVC(sender:)))
-        navigationController!.navigationItem.leftBarButtonItem = backButton
-        
+
+        navigationController!.navigationBar.tintColor = UIColor.white
+        navigationController!.navigationItem.hidesBackButton = false
+
+        navigationController!.navigationBar.standardAppearance.shadowColor = .white
+        navigationController!.navigationBar.standardAppearance.backgroundColor = .white
+        navigationController!.navigationBar.scrollEdgeAppearance? = navigationController!.navigationBar.standardAppearance
+
+        navigationController?.navigationBar.barTintColor = UIColor.white
+        navigationController?.navigationBar.backgroundColor = UIColor.AppColors.accentColor
+
+        let exitButton = UIBarButtonItem()
+        exitButton.title = "Back"
+        exitButton.tintColor = UIColor.white
+        exitButton.target = self
+        exitButton.action = #selector(back)
+
+        navigationItem.leftBarButtonItem = exitButton
+
         let stack = UIStackView(arrangedSubviews: [imageView, nameLabel, locationLabel, genderLabel, originLabel, statusLabel])
         stack.axis = .vertical
         stack.spacing = UIConstants.spacing
@@ -89,9 +99,15 @@ class DetailViewController: UIViewController {
         stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: UIConstants.spacing).isActive = true
         stack.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -50).isActive = true
         stack.leftAnchor.constraint(equalTo: view.leftAnchor,  constant: 50).isActive = true
-
     }
-    
+
+    @objc func back() {
+        let masterViewController : MasterViewController = MasterViewController()
+        let controller = UINavigationController(rootViewController: masterViewController)
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: false, completion: nil)
+    }
+
     @objc func popVC(sender: UIBarButtonItem) {
        navigationController?.popViewController(animated: true)
     }

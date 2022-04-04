@@ -14,9 +14,17 @@ class RickAndMortyService {
     
     var heroes : [Hero] = []
     var heroesImages : [UIImage] = []
+    var previous = ""
+    var next = ""
     
     func getPage(completion: @escaping (RickAndMorty?) ->()) {
         AF.request("https://rickandmortyapi.com/api/character").responseDecodable(of: RickAndMorty.self) { result in
+            completion(result.value)
+        }
+    }
+
+    func getPage(url: String, completion: @escaping (RickAndMorty?) ->()) {
+        AF.request(url).responseDecodable(of: RickAndMorty.self) { result in
             completion(result.value)
         }
     }
