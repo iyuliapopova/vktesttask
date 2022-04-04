@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    let service = RickAndMortyService.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        service.getPage { result in
+            print(result)
+        }
     }
 
 
